@@ -4,5 +4,8 @@
   "description": "example",
   "dependencies": {
     "esbuild": "^0.19.11"
+  },
+  "scripts":{
+    "build": "sam build"
   }
 }
