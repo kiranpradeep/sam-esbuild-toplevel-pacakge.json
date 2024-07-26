@@ -1,0 +1,28 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: 'example'
+
+Resources:
+  func1:
+    Type: AWS::Serverless::Function 
+    Properties:
+      CodeUri: func1/
+      Handler: app.lambdaHandler
+      Runtime: nodejs20.x
+    Metadata:
+      BuildMethod: esbuild
+      BuildProperties:
+        EntryPoints: 
+          - app.js
+  func2:
+    Type: AWS::Serverless::Function 
+    Properties:
+      CodeUri: func2/
+      Handler: app.lambdaHandler
+      Runtime: nodejs20.x
+    Metadata:
+      BuildMethod: esbuild
+      BuildProperties:
+        EntryPoints: 
+          - app.js
+
